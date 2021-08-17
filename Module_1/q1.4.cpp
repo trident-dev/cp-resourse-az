@@ -1,3 +1,7 @@
+/*use long long in case of sums or aggregates
+ ------UNSOLVED----------
+ Some random wrong answer */
+
 #include <bits/stdc++.h>
 using namespace std;
 #define endl '\n'
