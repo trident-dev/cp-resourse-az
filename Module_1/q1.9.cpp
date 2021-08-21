@@ -1,3 +1,5 @@
+/*Debug to find out what goes wrong, the logic seems right*/
+
 #include <bits/stdc++.h>
 using namespace std;
 #define endl '\n'
@@ -6,23 +8,24 @@ typedef long long ll;
 #define mod 1000000007
 
 void solve(){
-	int a,b,c=0,d=0;
+	lli a,b,c=0,d=0;
 	cin>>a>>b;
 	int arr[a];
-	map<int> mp; 
-	vector<int> vec;
-	for(int i =0; i<a; i++){
+	map<lli, lli> mp; 
+	vector<lli> vec;
+	for(lli i =0; i<a; i++){
 		cin>>arr[i];
 		mp[arr[i]]++;
 	}
 	for(auto it:mp){
 		c++;
-		if(it->second>1)
-			vec.push_back((it->second)-1);
+		if(it.second > 1LL)
+			vec.push_back((it.second)-1);
 	}
-	for(int i=vec.size()-1; i>0; i--){
+	for(int i=0; i<(int)vec.size(); i++){
 		if(vec[i]<b){
 			b-=vec[i];
+			vec[i]=0;
 		}
 		else if(b<=vec[i]){
 			vec[i]-=b;
@@ -31,8 +34,10 @@ void solve(){
 	}
 	d=a*(a-1)/2;
 	for(auto it:vec){
-		if(it>0)
+		if(it>1)
 			d-=(it*(it-1)/2);
+		else if(it ==1)
+			d-=1;
 	}
 
 	cout<<d<<endl;
