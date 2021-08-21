@@ -6,21 +6,13 @@ typedef long long ll;
 #define mod 1000000007
 
 void solve(){
-	string s;
-	cin>>s;
-	if(s.length() == 1){
-		if(s=='X' || s=='x')
-			cout<<1<<endl;
-		else
-			cout<<0<<endl;
-		return;
-	}
-	stack <char> st;
-	st.push(s[0]);
-	string ex1="", ex2="";
-	for(int i=1; i<st.length(); i++){
-		if()
-	}
+	int a, b,c,d;
+	cin>>a;
+	map<char, int> mp;
+	char arr[a];
+	
+
+
 }
 
 signed main(){
