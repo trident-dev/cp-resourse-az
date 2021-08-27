@@ -18,8 +18,15 @@ void solve(){
 	stack <char> st;
 	st.push(s[0]);
 	string ex1="", ex2="";
-	for(int i=1; i<st.length(); i++){
-		if()
+	for(int i=1; i<s.length(); i++){
+		if(s[i]=='(')
+			st.push('(');
+		else if(s[i] == ')'){
+			if(!st.empty())
+				st.pop()
+			if(st.size()==1)
+				
+		}
 	}
 }
 
